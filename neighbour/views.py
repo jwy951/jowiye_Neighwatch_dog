@@ -115,26 +115,26 @@ def post(request):
 
     return render(request,'post.html',{"posts":posts})      
 
-# @login_required(login_url='/accounts/login/')
-# def new_post(request):
-#     current_user=request.user
-#     profile =Profile.objects.get(username=current_user)
+@login_required(login_url='/accounts/login/')
+def new_post(request):
+    current_user=request.user
+    profile =Profile.objects.get(username=current_user)
 
-#     if request.method=="POST":
-#         form = PostForm(request.POST,request.FILES)
-#         if form.is_valid():
-#             post = form.save(commit = False)
-#             post.username = current_user
-#             post.neighbourhood = profile.neighbourhood
-#             post.avatar = profile.avatar
-#             post.save()
+    if request.method=="POST":
+        form = PostForm(request.POST,request.FILES)
+        if form.is_valid():
+            post = form.save(commit = False)
+            post.username = current_user
+            post.neighbourhood = profile.neighbourhood
+            post.avatar = profile.avatar
+            post.save()
 
-#         return HttpResponseRedirect('/post')
+        return HttpResponseRedirect('/post')
 
-#     else:
-#         form = PostForm()
+    else:
+        form = PostForm()
 
-#     return render(request,'post_form.html',{"form":form})    
+    return render(request,'post_form.html',{"form":form})    
     
 # @login_required(login_url='/accounts/login/')
 # def search_results(request):
