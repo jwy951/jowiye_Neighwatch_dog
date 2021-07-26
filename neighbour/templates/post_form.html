@@ -3,7 +3,7 @@
 {% load static %}
 {% block content %}
 <div class="container" style="background-image:url('/static/images/watch1.jpg'); height:49.7rem">
-    <div class="row" style="color:whitesmoke">
+    <div class="row" style="color:black">
         <div class="col-md-4 phone-section">
         </div>
         <div class="col-md-4 form-section">
@@ -11,7 +11,7 @@
             {% if form.errors %}
             <p>Please enter correct value</p>
             {% endif %}
-            <div class="panel panel-default" style="margin-top:20px;">
+            <div class="panel panel-default" style="margin-top:10px;background-color: aquamarine">
                 <div class="panel-body">
                     <div class="text-center">
                         <form action="{% url 'new-post' %}" method="post" enctype="multipart/form-data">
