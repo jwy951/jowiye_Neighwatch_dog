@@ -36,12 +36,12 @@ def registration(request):
     return render(request, 'registration/register.html', context)
 
 
-# @login_required(login_url='/accounts/login/')
-# def my_profile(request):
-#     current_user=request.user
-#     profile =Profile.objects.get(username=current_user)
+@login_required(login_url='/accounts/login/')
+def my_profile(request):
+    current_user=request.user
+    profile =Profile.objects.get(username=current_user)
 
-#     return render(request,'user_profile.html',{"profile":profile})
+    return render(request,'user_profile.html',{"profile":profile})
 
 
 # @login_required(login_url='/accounts/login/')
