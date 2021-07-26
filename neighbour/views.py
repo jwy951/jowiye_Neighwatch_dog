@@ -90,13 +90,13 @@ def update_profile(request):
 
     return render(request,'update_profile.html',{"form":form})  
 
-# @login_required(login_url='/accounts/login/')
-# def authorities(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     authorities = Authorities.objects.filter(neighbourhood=profile.neighbourhood)
+@login_required(login_url='/accounts/login/')
+def authorities(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    authorities = Authorities.objects.filter(neighbourhood=profile.neighbourhood)
 
-#     return render(request,'security.html',{"authorities":authorities})   
+    return render(request,'security.html',{"authorities":authorities})   
 
 
 # @login_required(login_url='/accounts/login/')
