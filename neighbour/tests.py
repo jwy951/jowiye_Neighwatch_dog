@@ -15,10 +15,10 @@ class neighbourhoodTestClass(TestCase):
     def tearDown(self):
         neighbourhood.objects.all().delete()
 
-    # def test_save_method(self):
-    #     self.kinoo.save_neighbourhood()
-    #     hood = neighbourhood.objects.all()
-    #     self.assertTrue(len(hood)>0)
+    def test_save_method(self):
+        self.kinoo.save_neighbourhood()
+        hood = neighbourhood.objects.all()
+        self.assertTrue(len(hood)>0)
 
     # def test_delete_method(self):
     #     self.kinoo.delete_neighbourhood('kinoo')
