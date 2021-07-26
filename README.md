@@ -28,7 +28,7 @@ https://watchdog.herokuapp.com/
 * unzip it on your documents folder
 * open the folder on your preferred text/code editor
 * code away
-## Technologies used
+## User stories
 * Sign in with the application to start using.
 * Set up a profile about me and a general location and my neighborhood name.
 * Find a list of different businesses in my neighborhood.
