@@ -107,13 +107,13 @@ def health(request):
 
     return render(request,'health.html',{"health":health})     
 
-# @login_required(login_url='/accounts/login/')
-# def post(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     posts = Post.objects.filter(neighbourhood=profile.neighbourhood)
+@login_required(login_url='/accounts/login/')
+def post(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    posts = Post.objects.filter(neighbourhood=profile.neighbourhood)
 
-#     return render(request,'post.html',{"posts":posts})      
+    return render(request,'post.html',{"posts":posts})      
 
 # @login_required(login_url='/accounts/login/')
 # def new_post(request):
