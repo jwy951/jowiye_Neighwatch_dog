@@ -14,7 +14,7 @@ The program lets the user register
 * Example output: User can login to site
 
 ## Live Site
-https://watchdog.herokuapp.com/
+https://neighwatchdog.herokuapp.com/
 
 ## Prerequisites
 * Python
