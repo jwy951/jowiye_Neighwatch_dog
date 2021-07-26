@@ -99,13 +99,13 @@ def authorities(request):
     return render(request,'security.html',{"authorities":authorities})   
 
 
-# @login_required(login_url='/accounts/login/')
-# def health(request):
-#     current_user=request.user
-#     profile=Profile.objects.get(username=current_user)
-#     health = Health.objects.filter(neighbourhood=profile.neighbourhood)
+@login_required(login_url='/accounts/login/')
+def health(request):
+    current_user=request.user
+    profile=Profile.objects.get(username=current_user)
+    health = Health.objects.filter(neighbourhood=profile.neighbourhood)
 
-#     return render(request,'health.html',{"health":health})     
+    return render(request,'health.html',{"health":health})     
 
 # @login_required(login_url='/accounts/login/')
 # def post(request):
