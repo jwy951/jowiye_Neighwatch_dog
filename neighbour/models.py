@@ -21,39 +21,39 @@ class neighbourhood(models.Model):
     def delete_neighbourhood(cls,neighbourhood):
         cls.objects.filter(neighbourhood=neighbourhood).delete()
 
-# class Profile(models.Model):
-#     avatar = models.ImageField(upload_to='avatars/')
-#     description = HTMLField()
-#     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
-#     username = models.ForeignKey(User,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
+class Profile(models.Model):
+    avatar = models.ImageField(upload_to='avatars/')
+    description = HTMLField()
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    username = models.ForeignKey(User,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
     
-# class Authorities(models.Model):
-#     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
-#     contact = models.IntegerField()
-#     address =models.CharField(max_length=100)
+class Authorities(models.Model):
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
+    contact = models.IntegerField()
+    address =models.CharField(max_length=100)
 
-#     def __str__(self):
-#         return self.name      
+    def __str__(self):
+        return self.name      
        
        
-# class Health(models.Model):
-#     logo = models.ImageField(upload_to='healthlogo/')
-#     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
-#     contact = models.IntegerField()
-#     address =models.CharField(max_length=100)
+class Health(models.Model):
+    logo = models.ImageField(upload_to='healthlogo/')
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
+    contact = models.IntegerField()
+    address =models.CharField(max_length=100)
 
 
-#     def __str__(self):
-#         return self.name    
+    def __str__(self):
+        return self.name    
 
 # class Post(models.Model):
 #     title = models.CharField(max_length=150)
