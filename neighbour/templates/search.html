@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<div class="container" style="background-image:url('/static/images/watch1.jpg'); height:49.7rem">
+<div class="container" style="background-image:url('/static/images/neihg.jpg'); height:49.7rem; background-repeat:no-repeat">
+    <div class="col-md-4"></div>
     <div class="row text-center">
         {% if posts %}
         <h2> Found {{posts|length}} results with the search term "{{message}}"</h2>
@@ -30,6 +31,7 @@
                         <a href="/view/post/{{post.id}}" class="card-link">Continue reading</a>
                     </div>
                 </div>
+                <div class="col-md-4"></div>
                 {% endfor %}
             </div>
         </div>
@@ -38,7 +40,7 @@
 </div>
 <style>
     h2 {
-        color: white;
+        color: black;
     }
 </style>
 {% endblock %}
