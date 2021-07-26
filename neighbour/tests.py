@@ -20,7 +20,7 @@ class neighbourhoodTestClass(TestCase):
         hood = neighbourhood.objects.all()
         self.assertTrue(len(hood)>0)
 
-    # def test_delete_method(self):
-    #     self.kinoo.delete_neighbourhood('kinoo')
-    #     hood = neighbourhood.objects.all()
-    #     self.assertTrue(len(hood)==0)
+    def test_delete_method(self):
+        self.kinoo.delete_neighbourhood('kinoo')
+        hood = neighbourhood.objects.all()
+        self.assertTrue(len(hood)==0)
